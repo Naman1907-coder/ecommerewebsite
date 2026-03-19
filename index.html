@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+
+    <!-- this is for the header  -->
+    <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
+<header class="bg-gray-900">
+  <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+    <div class="flex lg:flex-1">
+      <a href="#" class="-m-1.5 p-1.5">
+        <span class="sr-only">Your Company</span>
+        <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="" class="h-8 w-auto" />
+      </a>
+    </div>
+    <div class="flex lg:hidden">
+      <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400">
+        <span class="sr-only">Open main menu</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+          <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+    <el-popover-group class="hidden lg:flex lg:gap-x-12">
+      <div class="relative">
+        <button popovertarget="desktop-menu-product" class="flex items-center gap-x-1 text-sm/6 font-semibold text-white">
+          Product
+          <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5 flex-none text-gray-500">
+            <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+          </svg>
+        </button>
+
+        <el-popover id="desktop-menu-product" anchor="bottom" popover class="w-screen max-w-md overflow-hidden rounded-3xl bg-gray-800 outline-1 -outline-offset-1 outline-white/10 transition transition-discrete [--anchor-gap:--spacing(3)] backdrop:bg-transparent open:block data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in">
+          <div class="p-4">
+            <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-white/5">
+              <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-700/50 group-hover:bg-gray-700">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 text-gray-400 group-hover:text-white">
+                  <path d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="flex-auto">
+                <a href="#" class="block font-semibold text-white">
+                  Analytics
+                  <span class="absolute inset-0"></span>
+                </a>
+                <p class="mt-1 text-gray-400">Get a better understanding of your traffic</p>
+              </div>
+            </div>
+            <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-white/5">
+              <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-700/50 group-hover:bg-gray-700">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 text-gray-400 group-hover:text-white">
+                  <path d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="flex-auto">
+                <a href="#" class="block font-semibold text-white">
+                  Engagement
+                  <span class="absolute inset-0"></span>
+                </a>
+                <p class="mt-1 text-gray-400">Speak directly to your customers</p>
+              </div>
+            </div>
+            <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-white/5">
+              <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-700/50 group-hover:bg-gray-700">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 text-gray-400 group-hover:text-white">
+                  <path d="M7.864 4.243A7.5 7.5 0 0 1 19.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 0 0 4.5 10.5a7.464 7.464 0 0 1-1.15 3.993m1.989 3.559A11.209 11.209 0 0 0 8.25 10.5a3.75 3.75 0 1 1 7.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 0 1-3.6 9.75m6.633-4.596a18.666 18.666 0 0 1-2.485 5.33" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="flex-auto">
+                <a href="#" class="block font-semibold text-white">
+                  Security
+                  <span class="absolute inset-0"></span>
+                </a>
+                <p class="mt-1 text-gray-400">Your customers’ data will be safe and secure</p>
+              </div>
+            </div>
+            <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-white/5">
+              <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-700/50 group-hover:bg-gray-700">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 text-gray-400 group-hover:text-white">
+                  <path d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 0 0 2.25-2.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v2.25A2.25 2.25 0 0 0 6 10.5Zm0 9.75h2.25A2.25 2.25 0 0 0 10.5 18v-2.25a2.25 2.25 0 0 0-2.25-2.25H6a2.25 2.25 0 0 0-2.25 2.25V18A2.25 2.25 0 0 0 6 20.25Zm9.75-9.75H18a2.25 2.25 0 0 0 2.25-2.25V6A2.25 2.25 0 0 0 18 3.75h-2.25A2.25 2.25 0 0 0 13.5 6v2.25a2.25 2.25 0 0 0 2.25 2.25Z" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="flex-auto">
+                <a href="#" class="block font-semibold text-white">
+                  Integrations
+                  <span class="absolute inset-0"></span>
+                </a>
+                <p class="mt-1 text-gray-400">Connect with third-party tools</p>
+              </div>
+            </div>
+            <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-white/5">
+              <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-700/50 group-hover:bg-gray-700">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 text-gray-400 group-hover:text-white">
+                  <path d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="flex-auto">
+                <a href="#" class="block font-semibold text-white">
+                  Automations
+                  <span class="absolute inset-0"></span>
+                </a>
+                <p class="mt-1 text-gray-400">Build strategic funnels that will convert</p>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 divide-x divide-white/10 bg-gray-700/50">
+            <a href="#" class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-white hover:bg-gray-700/50">
+              <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5 flex-none text-gray-500">
+                <path d="M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0Zm6.39-2.908a.75.75 0 0 1 .766.027l3.5 2.25a.75.75 0 0 1 0 1.262l-3.5 2.25A.75.75 0 0 1 8 12.25v-4.5a.75.75 0 0 1 .39-.658Z" clip-rule="evenodd" fill-rule="evenodd" />
+              </svg>
+              Watch demo
+            </a>
+            <a href="#" class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-white hover:bg-gray-700/50">
+              <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5 flex-none text-gray-500">
+                <path d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 0 1 2.43 8.326 13.019 13.019 0 0 1 2 5V3.5Z" clip-rule="evenodd" fill-rule="evenodd" />
+              </svg>
+              Contact sales
+            </a>
+          </div>
+        </el-popover>
+      </div>
+
+      <a href="#" class="text-sm/6 font-semibold text-white">Features</a>
+      <a href="#" class="text-sm/6 font-semibold text-white">Marketplace</a>
+      <a href="#" class="text-sm/6 font-semibold text-white">Company</a>
+    </el-popover-group>
+    <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+      <a href="#" class="text-sm/6 font-semibold text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </nav>
+  <el-dialog>
+    <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+      <div tabindex="0" class="fixed inset-0 focus:outline-none">
+        <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Your Company</span>
+              <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="" class="h-8 w-auto" />
+            </a>
+            <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-gray-400">
+              <span class="sr-only">Close menu</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-white/10">
+              <div class="space-y-2 py-6">
+                <div class="-mx-3">
+                  <button type="button" command="--toggle" commandfor="products" class="flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-white hover:bg-white/5">
+                    Product
+                    <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5 flex-none in-aria-expanded:rotate-180">
+                      <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                    </svg>
+                  </button>
+                  <el-disclosure id="products" hidden class="mt-2 block space-y-2">
+                    <a href="#" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-white hover:bg-white/5">Analytics</a>
+                    <a href="#" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-white hover:bg-white/5">Engagement</a>
+                    <a href="#" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-white hover:bg-white/5">Security</a>
+                    <a href="#" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-white hover:bg-white/5">Integrations</a>
+                    <a href="#" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-white hover:bg-white/5">Automations</a>
+                    <a href="#" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-white hover:bg-white/5">Watch demo</a>
+                    <a href="#" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-white hover:bg-white/5">Contact sales</a>
+                  </el-disclosure>
+                </div>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Features</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Marketplace</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Company</a>
+              </div>
+              <div class="py-6">
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5">Log in</a>
+              </div>
+            </div>
+          </div>
+        </el-dialog-panel>
+      </div>
+    </dialog>
+  </el-dialog>
+</header>
+
+<!-- this is for the navbar  -->
+<!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
+<div class="bg-white">
+  <!-- Mobile menu -->
+  <el-dialog>
+    <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+      <el-dialog-backdrop class="fixed inset-0 bg-black/25 transition-opacity duration-300 ease-linear data-closed:opacity-0"></el-dialog-backdrop>
+      <div tabindex="0" class="fixed inset-0 flex focus:outline-none">
+        <el-dialog-panel class="relative flex w-full max-w-xs transform flex-col overflow-y-auto bg-white pb-12 shadow-xl transition duration-300 ease-in-out data-closed:-translate-x-full">
+          <div class="flex px-4 pt-5 pb-2">
+            <button type="button" command="close" commandfor="mobile-menu" class="relative -m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400">
+              <span class="absolute -inset-0.5"></span>
+              <span class="sr-only">Close menu</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Links -->
+          <el-tab-group class="mt-2 block">
+            <div class="border-b border-gray-200">
+              <el-tab-list class="-mb-px flex space-x-8 px-4">
+                <button class="flex-1 border-b-2 border-transparent px-1 py-4 text-base font-medium whitespace-nowrap text-gray-900 aria-selected:border-indigo-600 aria-selected:text-indigo-600">Women</button>
+                <button class="flex-1 border-b-2 border-transparent px-1 py-4 text-base font-medium whitespace-nowrap text-gray-900 aria-selected:border-indigo-600 aria-selected:text-indigo-600">Men</button>
+              </el-tab-list>
+            </div>
+            <el-tab-panels>
+              <div class="space-y-10 px-4 pt-10 pb-8">
+                <div class="grid grid-cols-2 gap-x-4">
+                  <div class="group relative text-sm">
+                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-01.jpg" alt="Models sitting back to back, wearing Basic Tee in black and bone." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75" />
+                    <a href="#" class="mt-6 block font-medium text-gray-900">
+                      <span aria-hidden="true" class="absolute inset-0 z-10"></span>
+                      New Arrivals
+                    </a>
+                    <p aria-hidden="true" class="mt-1">Shop now</p>
+                  </div>
+                  <div class="group relative text-sm">
+                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-02.jpg" alt="Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75" />
+                    <a href="#" class="mt-6 block font-medium text-gray-900">
+                      <span aria-hidden="true" class="absolute inset-0 z-10"></span>
+                      Basic Tees
+                    </a>
+                    <p aria-hidden="true" class="mt-1">Shop now</p>
+                  </div>
+                </div>
+                <div>
+                  <p id="women-clothing-heading-mobile" class="font-medium text-gray-900">Clothing</p>
+                  <ul role="list" aria-labelledby="women-clothing-heading-mobile" class="mt-6 flex flex-col space-y-6">
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Tops</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Dresses</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Pants</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Denim</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Sweaters</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">T-Shirts</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Jackets</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Activewear</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Browse All</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <p id="women-accessories-heading-mobile" class="font-medium text-gray-900">Accessories</p>
+                  <ul role="list" aria-labelledby="women-accessories-heading-mobile" class="mt-6 flex flex-col space-y-6">
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Watches</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Wallets</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Bags</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Sunglasses</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Hats</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Belts</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <p id="women-brands-heading-mobile" class="font-medium text-gray-900">Brands</p>
+                  <ul role="list" aria-labelledby="women-brands-heading-mobile" class="mt-6 flex flex-col space-y-6">
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Full Nelson</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">My Way</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Re-Arranged</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Counterfeit</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Significant Other</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div hidden class="space-y-10 px-4 pt-10 pb-8">
+                <div class="grid grid-cols-2 gap-x-4">
+                  <div class="group relative text-sm">
+                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg" alt="Drawstring top with elastic loop closure and textured interior padding." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75" />
+                    <a href="#" class="mt-6 block font-medium text-gray-900">
+                      <span aria-hidden="true" class="absolute inset-0 z-10"></span>
+                      New Arrivals
+                    </a>
+                    <p aria-hidden="true" class="mt-1">Shop now</p>
+                  </div>
+                  <div class="group relative text-sm">
+                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-02-image-card-06.jpg" alt="Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75" />
+                    <a href="#" class="mt-6 block font-medium text-gray-900">
+                      <span aria-hidden="true" class="absolute inset-0 z-10"></span>
+                      Artwork Tees
+                    </a>
+                    <p aria-hidden="true" class="mt-1">Shop now</p>
+                  </div>
+                </div>
+                <div>
+                  <p id="men-clothing-heading-mobile" class="font-medium text-gray-900">Clothing</p>
+                  <ul role="list" aria-labelledby="men-clothing-heading-mobile" class="mt-6 flex flex-col space-y-6">
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Tops</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Pants</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Sweaters</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">T-Shirts</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Jackets</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Activewear</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Browse All</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <p id="men-accessories-heading-mobile" class="font-medium text-gray-900">Accessories</p>
+                  <ul role="list" aria-labelledby="men-accessories-heading-mobile" class="mt-6 flex flex-col space-y-6">
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Watches</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Wallets</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Bags</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Sunglasses</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Hats</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Belts</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <p id="men-brands-heading-mobile" class="font-medium text-gray-900">Brands</p>
+                  <ul role="list" aria-labelledby="men-brands-heading-mobile" class="mt-6 flex flex-col space-y-6">
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Re-Arranged</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Counterfeit</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">Full Nelson</a>
+                    </li>
+                    <li class="flow-root">
+                      <a href="#" class="-m-2 block p-2 text-gray-500">My Way</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </el-tab-panels>
+          </el-tab-group>
+
+          <div class="space-y-6 border-t border-gray-200 px-4 py-6">
+            <div class="flow-root">
+              <a href="#" class="-m-2 block p-2 font-medium text-gray-900">Company</a>
+            </div>
+            <div class="flow-root">
+              <a href="#" class="-m-2 block p-2 font-medium text-gray-900">Stores</a>
+            </div>
+          </div>
+
+          <div class="space-y-6 border-t border-gray-200 px-4 py-6">
+            <div class="flow-root">
+              <a href="#" class="-m-2 block p-2 font-medium text-gray-900">Sign in</a>
+            </div>
+            <div class="flow-root">
+              <a href="#" class="-m-2 block p-2 font-medium text-gray-900">Create account</a>
+            </div>
+          </div>
+
+          <div class="border-t border-gray-200 px-4 py-6">
+            <a href="#" class="-m-2 flex items-center p-2">
+              <img src="https://tailwindcss.com/plus-assets/img/flags/flag-canada.svg" alt="" class="block h-auto w-5 shrink-0" />
+              <span class="ml-3 block text-base font-medium text-gray-900">CAD</span>
+              <span class="sr-only">, change currency</span>
+            </a>
+          </div>
+        </el-dialog-panel>
+      </div>
+    </dialog>
+  </el-dialog>
+
+  <header class="relative bg-white">
+    <p class="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">Get free delivery on orders over $100</p>
+
+    <nav aria-label="Top" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="border-b border-gray-200">
+        <div class="flex h-16 items-center">
+          <button type="button" command="show-modal" commandfor="mobile-menu" class="relative rounded-md bg-white p-2 text-gray-400 lg:hidden">
+            <span class="absolute -inset-0.5"></span>
+            <span class="sr-only">Open menu</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+              <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+
+          <!-- Logo -->
+          <div class="ml-4 flex lg:ml-0">
+            <a href="#">
+              <span class="sr-only">Your Company</span>
+              <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="" class="h-8 w-auto" />
+            </a>
+          </div>
+
+          <!-- Flyout menus -->
+          <el-popover-group class="group/popover-group hidden lg:ml-8 lg:block lg:self-stretch">
+            <div class="flex h-full space-x-8">
+              <div class="group/popover flex">
+                <div class="relative flex">
+                  <button popovertarget="desktop-menu-women" class="relative flex items-center justify-center text-sm font-medium transition-colors duration-200 ease-out group-not-has-open/popover:text-gray-700 group-has-open/popover:text-indigo-600 group-not-has-open/popover:hover:text-gray-800">
+                    Women
+                    <span aria-hidden="true" class="absolute inset-x-0 -bottom-px z-30 h-0.5 bg-transparent duration-200 ease-in group-has-open/popover:bg-indigo-600 group-has-open/popover-group:duration-150 group-has-open/popover-group:ease-out"></span>
+                  </button>
+                </div>
+                <el-popover id="desktop-menu-women" anchor="bottom" popover class="w-full overflow-visible bg-white text-sm text-gray-500 transition transition-discrete [--anchor-gap:1px] backdrop:bg-transparent open:block data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in">
+                  <!-- Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow -->
+                  <div aria-hidden="true" class="absolute inset-0 top-1/2 bg-white shadow-sm"></div>
+                  <div class="relative bg-white">
+                    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                      <div class="grid grid-cols-2 gap-x-8 gap-y-10 py-16">
+                        <div class="col-start-2 grid grid-cols-2 gap-x-8">
+                          <div class="group relative text-base sm:text-sm">
+                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-01.jpg" alt="Models sitting back to back, wearing Basic Tee in black and bone." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75" />
+                            <a href="#" class="mt-6 block font-medium text-gray-900">
+                              <span aria-hidden="true" class="absolute inset-0 z-10"></span>
+                              New Arrivals
+                            </a>
+                            <p aria-hidden="true" class="mt-1">Shop now</p>
+                          </div>
+                          <div class="group relative text-base sm:text-sm">
+                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-02.jpg" alt="Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75" />
+                            <a href="#" class="mt-6 block font-medium text-gray-900">
+                              <span aria-hidden="true" class="absolute inset-0 z-10"></span>
+                              Basic Tees
+                            </a>
+                            <p aria-hidden="true" class="mt-1">Shop now</p>
+                          </div>
+                        </div>
+                        <div class="row-start-1 grid grid-cols-3 gap-x-8 gap-y-10 text-sm">
+                          <div>
+                            <p id="Clothing-heading" class="font-medium text-gray-900">Clothing</p>
+                            <ul role="list" aria-labelledby="Clothing-heading" class="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Tops</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Dresses</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Pants</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Denim</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Sweaters</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">T-Shirts</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Jackets</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Activewear</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Browse All</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p id="Accessories-heading" class="font-medium text-gray-900">Accessories</p>
+                            <ul role="list" aria-labelledby="Accessories-heading" class="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Watches</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Wallets</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Bags</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Sunglasses</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Hats</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Belts</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p id="Brands-heading" class="font-medium text-gray-900">Brands</p>
+                            <ul role="list" aria-labelledby="Brands-heading" class="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Full Nelson</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">My Way</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Re-Arranged</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Counterfeit</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Significant Other</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </el-popover>
+              </div>
+              <div class="group/popover flex">
+                <div class="relative flex">
+                  <button popovertarget="desktop-menu-men" class="relative flex items-center justify-center text-sm font-medium transition-colors duration-200 ease-out group-not-has-open/popover:text-gray-700 group-has-open/popover:text-indigo-600 group-not-has-open/popover:hover:text-gray-800">
+                    Men
+                    <span aria-hidden="true" class="absolute inset-x-0 -bottom-px z-30 h-0.5 bg-transparent duration-200 ease-in group-has-open/popover:bg-indigo-600 group-has-open/popover-group:duration-150 group-has-open/popover-group:ease-out"></span>
+                  </button>
+                </div>
+                <el-popover id="desktop-menu-men" anchor="bottom" popover class="w-full overflow-visible bg-white text-sm text-gray-500 transition transition-discrete [--anchor-gap:1px] backdrop:bg-transparent open:block data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in">
+                  <!-- Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow -->
+                  <div aria-hidden="true" class="absolute inset-0 top-1/2 bg-white shadow-sm"></div>
+                  <div class="relative bg-white">
+                    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                      <div class="grid grid-cols-2 gap-x-8 gap-y-10 py-16">
+                        <div class="col-start-2 grid grid-cols-2 gap-x-8">
+                          <div class="group relative text-base sm:text-sm">
+                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg" alt="Drawstring top with elastic loop closure and textured interior padding." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75" />
+                            <a href="#" class="mt-6 block font-medium text-gray-900">
+                              <span aria-hidden="true" class="absolute inset-0 z-10"></span>
+                              New Arrivals
+                            </a>
+                            <p aria-hidden="true" class="mt-1">Shop now</p>
+                          </div>
+                          <div class="group relative text-base sm:text-sm">
+                            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-02-image-card-06.jpg" alt="Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt." class="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75" />
+                            <a href="#" class="mt-6 block font-medium text-gray-900">
+                              <span aria-hidden="true" class="absolute inset-0 z-10"></span>
+                              Artwork Tees
+                            </a>
+                            <p aria-hidden="true" class="mt-1">Shop now</p>
+                          </div>
+                        </div>
+                        <div class="row-start-1 grid grid-cols-3 gap-x-8 gap-y-10 text-sm">
+                          <div>
+                            <p id="Clothing-heading" class="font-medium text-gray-900">Clothing</p>
+                            <ul role="list" aria-labelledby="Clothing-heading" class="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Tops</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Pants</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Sweaters</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">T-Shirts</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Jackets</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Activewear</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Browse All</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p id="Accessories-heading" class="font-medium text-gray-900">Accessories</p>
+                            <ul role="list" aria-labelledby="Accessories-heading" class="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Watches</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Wallets</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Bags</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Sunglasses</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Hats</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Belts</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p id="Brands-heading" class="font-medium text-gray-900">Brands</p>
+                            <ul role="list" aria-labelledby="Brands-heading" class="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Re-Arranged</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Counterfeit</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">Full Nelson</a>
+                              </li>
+                              <li class="flex">
+                                <a href="#" class="hover:text-gray-800">My Way</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </el-popover>
+              </div>
+
+              <a href="#" class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Company</a>
+              <a href="#" class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Stores</a>
+            </div>
+          </el-popover-group>
+
+          <div class="ml-auto flex items-center">
+            <div class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+              <a href="#" class="text-sm font-medium text-gray-700 hover:text-gray-800">Sign in</a>
+              <span aria-hidden="true" class="h-6 w-px bg-gray-200"></span>
+              <a href="#" class="text-sm font-medium text-gray-700 hover:text-gray-800">Create account</a>
+            </div>
+
+            <div class="hidden lg:ml-8 lg:flex">
+              <a href="#" class="flex items-center text-gray-700 hover:text-gray-800">
+                <img src="https://tailwindcss.com/plus-assets/img/flags/flag-canada.svg" alt="" class="block h-auto w-5 shrink-0" />
+                <span class="ml-3 block text-sm font-medium">CAD</span>
+                <span class="sr-only">, change currency</span>
+              </a>
+            </div>
+
+            <!-- Search -->
+            <div class="flex lg:ml-6">
+              <a href="#" class="p-2 text-gray-400 hover:text-gray-500">
+                <span class="sr-only">Search</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                  <path d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Cart -->
+            <div class="ml-4 flow-root lg:ml-6">
+              <a href="#" class="group -m-2 flex items-center p-2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 shrink-0 text-gray-400 group-hover:text-gray-500">
+                  <path d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
+                <span class="sr-only">items in cart, view bag</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>
+<!-- this is for category filter  -->
+
+
+
+<!-- this code is for the product list  -->
+ <div class="bg-white">
+  <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+    <h2 class="sr-only">Products</h2>
+
+    <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+      <a href="#" class="group">
+        <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-04-image-card-01.jpg" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8" />
+        <h3 class="mt-4 text-sm text-gray-700">Earthen Bottle</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$48</p>
+      </a>
+      <a href="#" class="group">
+        <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-04-image-card-02.jpg" alt="Olive drab green insulated bottle with flared screw lid and flat top." class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8" />
+        <h3 class="mt-4 text-sm text-gray-700">Nomad Tumbler</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$35</p>
+      </a>
+      <a href="#" class="group">
+        <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-04-image-card-03.jpg" alt="Person using a pen to cross a task off a productivity paper card." class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8" />
+        <h3 class="mt-4 text-sm text-gray-700">Focus Paper Refill</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$89</p>
+      </a>
+      <a href="#" class="group">
+        <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-04-image-card-04.jpg" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8" />
+        <h3 class="mt-4 text-sm text-gray-700">Machined Mechanical Pencil</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$35</p>
+      </a>
+      <a href="#" class="group">
+        <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-04-image-card-05.jpg" alt="Paper card sitting upright in walnut card holder on desk." class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8" />
+        <h3 class="mt-4 text-sm text-gray-700">Focus Card Tray</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$64</p>
+      </a>
+      <a href="#" class="group">
+        <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-04-image-card-06.jpg" alt="Stack of 3 small drab green cardboard paper card refill boxes with white text." class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8" />
+        <h3 class="mt-4 text-sm text-gray-700">Focus Multi-Pack</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$39</p>
+      </a>
+      <a href="#" class="group">
+        <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-04-image-card-07.jpg" alt="Brass scissors with geometric design, black steel finger holes, and included upright brass stand." class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8" />
+        <h3 class="mt-4 text-sm text-gray-700">Brass Scissors</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$50</p>
+      </a>
+      <a href="#" class="group">
+        <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-04-image-card-08.jpg" alt="Textured gray felt pouch for paper cards with snap button flap and elastic pen holder loop." class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8" />
+        <h3 class="mt-4 text-sm text-gray-700">Focus Carry Pouch</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$32</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<!-- this for more product  -->
+
+<div class="bg-white">
+  <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+    <h2 class="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2>
+
+    <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+      <div class="group relative">
+        <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80" />
+        <div class="mt-4 flex justify-between">
+          <div>
+            <h3 class="text-sm text-gray-700">
+              <a href="#">
+                <span aria-hidden="true" class="absolute inset-0"></span>
+                Basic Tee
+              </a>
+            </h3>
+            <p class="mt-1 text-sm text-gray-500">Black</p>
+          </div>
+          <p class="text-sm font-medium text-gray-900">$35</p>
+        </div>
+      </div>
+      <div class="group relative">
+        <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-02.jpg" alt="Front of men&#039;s Basic Tee in white." class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80" />
+        <div class="mt-4 flex justify-between">
+          <div>
+            <h3 class="text-sm text-gray-700">
+              <a href="#">
+                <span aria-hidden="true" class="absolute inset-0"></span>
+                Basic Tee
+              </a>
+            </h3>
+            <p class="mt-1 text-sm text-gray-500">Aspen White</p>
+          </div>
+          <p class="text-sm font-medium text-gray-900">$35</p>
+        </div>
+      </div>
+      <div class="group relative">
+        <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-03.jpg" alt="Front of men&#039;s Basic Tee in dark gray." class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80" />
+        <div class="mt-4 flex justify-between">
+          <div>
+            <h3 class="text-sm text-gray-700">
+              <a href="#">
+                <span aria-hidden="true" class="absolute inset-0"></span>
+                Basic Tee
+              </a>
+            </h3>
+            <p class="mt-1 text-sm text-gray-500">Charcoal</p>
+          </div>
+          <p class="text-sm font-medium text-gray-900">$35</p>
+        </div>
+      </div>
+      <div class="group relative">
+        <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-04.jpg" alt="Front of men&#039;s Artwork Tee in peach with white and brown dots forming an isometric cube." class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80" />
+        <div class="mt-4 flex justify-between">
+          <div>
+            <h3 class="text-sm text-gray-700">
+              <a href="#">
+                <span aria-hidden="true" class="absolute inset-0"></span>
+                Artwork Tee
+              </a>
+            </h3>
+            <p class="mt-1 text-sm text-gray-500">Iso Dots</p>
+          </div>
+          <p class="text-sm font-medium text-gray-900">$35</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- new arrivals section  -->
+<div class="relative overflow-hidden bg-white">
+  <div class="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
+    <div class="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
+      <div class="sm:max-w-lg">
+        <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Summer styles are finally here</h1>
+        <p class="mt-4 text-xl text-gray-500">This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care if you live or die.</p>
+      </div>
+      <div>
+        <div class="mt-10">
+          <!-- Decorative image grid -->
+          <div aria-hidden="true" class="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl">
+            <div class="absolute transform sm:top-0 sm:left-1/2 sm:translate-x-8 lg:top-1/2 lg:left-1/2 lg:translate-x-8 lg:-translate-y-1/2">
+              <div class="flex items-center space-x-6 lg:space-x-8">
+                <div class="grid shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                  <div class="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
+                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg" alt="" class="size-full object-cover" />
+                  </div>
+                  <div class="h-64 w-44 overflow-hidden rounded-lg">
+                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg" alt="" class="size-full object-cover" />
+                  </div>
+                </div>
+                <div class="grid shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                  <div class="h-64 w-44 overflow-hidden rounded-lg">
+                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg" alt="" class="size-full object-cover" />
+                  </div>
+                  <div class="h-64 w-44 overflow-hidden rounded-lg">
+                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg" alt="" class="size-full object-cover" />
+                  </div>
+                  <div class="h-64 w-44 overflow-hidden rounded-lg">
+                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg" alt="" class="size-full object-cover" />
+                  </div>
+                </div>
+                <div class="grid shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                  <div class="h-64 w-44 overflow-hidden rounded-lg">
+                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg" alt="" class="size-full object-cover" />
+                  </div>
+                  <div class="h-64 w-44 overflow-hidden rounded-lg">
+                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg" alt="" class="size-full object-cover" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="#" class="inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700">Shop Collection</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- this is the footer part  -->
+ <section class="relative isolate overflow-hidden bg-gray-900 px-6 py-24 sm:py-32 lg:px-8">
+  <div class="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,var(--color-indigo-500),transparent)] opacity-10"></div>
+  <div class="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-gray-900 shadow-xl ring-1 shadow-indigo-500/5 ring-white/5 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center"></div>
+  <div class="mx-auto max-w-2xl lg:max-w-4xl">
+    <img src="https://tailwindcss.com/plus-assets/img/logos/workcation-logo-indigo-400.svg" alt="" class="mx-auto h-12" />
+    <figure class="mt-10">
+      <blockquote class="text-center text-xl/8 font-semibold text-white sm:text-2xl/9">
+        <p>“At workcation, we don’t just sell products — we build experiences that simplify your everyday life. <br>
+
+Every item you see here is chosen with intention: quality over hype, value over shortcuts, and design that actually serves a purpose. We know you have options, and the fact that you chose us means something — we don’t take that lightly. <br>
+
+Our commitment is simple: <br>
+
+* No compromises on quality <br>
+* No tricks with pricing <br>
+* No excuses on service <br>
+
+We’re building more than a store. We’re building trust — one order at a time. <br>
+
+If we ever fall short, we expect you to hold us accountable. That’s how we grow, and that’s how we stay honest. <br>
+
+Thank you for being part of this journey. <br>
+
+— CEO, workcation
+”</p>
+      </blockquote>
+      <figcaption class="mt-10">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="mx-auto size-10 rounded-full" />
+        <div class="mt-4 flex items-center justify-center space-x-3 text-base">
+          <div class="font-semibold text-white">Judith Black</div>
+          <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-white">
+            <circle r="1" cx="1" cy="1" />
+          </svg>
+          <div class="text-gray-400">CEO of Workcation</div>
+        </div>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+
+<!-- this is the footer trial  -->
+
+<footer class="bg-gray-900 text-gray-300">
+  <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+    
+    <!-- Top Grid -->
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+      
+      <!-- Brand -->
+      <div>
+        <h2 class="text-xl font-bold text-white">Workcation</h2>
+        <p class="mt-4 text-sm text-gray-400">
+          Premium products designed to simplify your everyday life. Quality, trust, and experience — all in one place.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <h3 class="text-sm font-semibold text-white uppercase tracking-wider">Shop</h3>
+        <ul class="mt-4 space-y-2">
+          <li><a href="#" class="hover:text-white">All Products</a></li>
+          <li><a href="#" class="hover:text-white">New Arrivals</a></li>
+          <li><a href="#" class="hover:text-white">Best Sellers</a></li>
+          <li><a href="#" class="hover:text-white">Sale</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <h3 class="text-sm font-semibold text-white uppercase tracking-wider">Company</h3>
+        <ul class="mt-4 space-y-2">
+          <li><a href="#" class="hover:text-white">About Us</a></li>
+          <li><a href="#" class="hover:text-white">Careers</a></li>
+          <li><a href="#" class="hover:text-white">Blog</a></li>
+          <li><a href="#" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h3 class="text-sm font-semibold text-white uppercase tracking-wider">Subscribe</h3>
+        <p class="mt-4 text-sm text-gray-400">
+          Get the latest updates and offers.
+        </p>
+        <form class="mt-4 flex">
+          <input 
+            type="email" 
+            placeholder="Enter your email"
+            class="w-full rounded-l-md bg-gray-800 border border-gray-700 px-3 py-2 text-sm text-white focus:outline-none"
+          />
+          <button class="bg-indigo-600 px-4 py-2 text-sm font-semibold text-white rounded-r-md hover:bg-indigo-700">
+            Subscribe
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- Divider -->
+    <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col md:flex-row items-center justify-between">
+      
+      <!-- Copyright -->
+      <p class="text-sm text-gray-400">
+        © 2026 Workcation. All rights reserved.
+      </p>
+
+      <!-- Social Icons -->
+      <div class="mt-4 flex space-x-6 md:mt-0">
+        <a href="#" class="hover:text-white">
+          <span class="sr-only">Facebook</span>
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-4 3.8-4 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12H17l-.5 3h-2.7v7A10 10 0 0 0 22 12z"/>
+          </svg>
+        </a>
+
+        <a href="#" class="hover:text-white">
+          <span class="sr-only">Instagram</span>
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm4.5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6-1.2a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/>
+          </svg>
+        </a>
+
+        <a href="#" class="hover:text-white">
+          <span class="sr-only">Twitter</span>
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8 19c7.5 0 11.6-6.2 11.6-11.6v-.5A8.3 8.3 0 0 0 22 4.6a8.2 8.2 0 0 1-2.4.7 4.1 4.1 0 0 0 1.8-2.3 8.2 8.2 0 0 1-2.6 1A4.1 4.1 0 0 0 12 7.3a11.7 11.7 0 0 1-8.5-4.3 4.1 4.1 0 0 0 1.3 5.5A4 4 0 0 1 3 8v.1a4.1 4.1 0 0 0 3.3 4 4 4 0 0 1-1.9.1 4.1 4.1 0 0 0 3.8 2.9A8.3 8.3 0 0 1 2 17.5 11.7 11.7 0 0 0 8 19"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
